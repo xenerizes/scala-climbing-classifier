@@ -2,10 +2,13 @@ package classifier.naiveBayes
 
 import classifier.sample.{LabeledSample, ObjectClass, Word}
 
-private[naiveBayes] class Fit(sample: LabeledSample = new LabeledSample) {
-  val classProba: Map[ObjectClass, Double] = Map()
-  val words: Map[ObjectClass, Int] = Map()
-  val wordsFreq: Map[(Word, ObjectClass), Float] = Map()
-  val uniqueWords: Int = 0
-  val classList: List[ObjectClass] = Nil
+private[naiveBayes] case class Fit(sample: LabeledSample = new LabeledSample) {
+  val classList: List[ObjectClass] = sample.classList
+  val uniqueWordCount: Int = sample.wordList.size
+
+  def classProba(cl: ObjectClass): Double = classObjectCount(cl).toDouble / sample.objects.size
+  def classSpecificWordCount(w: Word, cl: ObjectClass): Int = sample.classWordList(cl).count(_.equals(w))
+  def classWordCount(cl: ObjectClass): Int = sample.classWordList(cl).length
+
+  private def classObjectCount(cl: ObjectClass): Int = sample.objects.count(_._2.equals(cl))
 }

@@ -1,8 +1,9 @@
 package classifier.sample
 
 case class LabeledSample(objects: Map[Object, ObjectClass] = Map()) {
-  def size(): Int = 0
-  def freq(): List[ClassProperty] = sizes().map(x => x.modify(x.property / size()))
-  def sizes(): List[ClassProperty] = Nil
-  def unique(): Int = 0
+  val classList: List[ObjectClass] = objects.values.toList.distinct
+  val wordList: List[Word] = objects.keys.toList.flatMap(_.words()).distinct
+
+  def classObjectList(cl: ObjectClass): List[Object] = objects.filter(_.equals(cl)).keys.toList
+  def classWordList(cl: ObjectClass): List[Word] = classObjectList(cl).flatMap(_.words()).distinct
 }

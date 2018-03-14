@@ -1,11 +1,12 @@
 package classifier.sample
 
-
-// TODO: get rid of list
 class LabeledSample {
   private var objects: List[(Object, ObjectClass)] = Nil
 
-  def append(o: Object, c: ObjectClass): Unit = objects = (o, c) :: objects
+  def size(): Int = objects.length // FIXME: change to words
+  def freq(): List[ClassProperty] = sizes().map(x => x.modify(x.property / size()))
+  def sizes(): List[ClassProperty] = Nil // TODO
+  def unique(): Int = objects.distinct.length // FIXME: change to words
 
-  def equals(obj: LabeledSample): Boolean = objects.equals(obj.objects)
+  def append(o: Object, c: ObjectClass): Unit = objects = (o, c) :: objects
 }

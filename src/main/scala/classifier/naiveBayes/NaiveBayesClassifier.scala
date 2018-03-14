@@ -1,10 +1,10 @@
 package classifier.naive_bayes
 
 import classifier.base.Classifier
-import classifier.sample.{LabeledSample, Sample}
+import classifier.sample._
 
 class NaiveBayesClassifier extends Classifier {
-  private var fit = TrainingResults()
+  private var fit: Fit = Fit()
 
   override def train(sample: LabeledSample): Unit = {
 

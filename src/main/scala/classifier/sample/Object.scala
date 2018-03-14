@@ -1,3 +1,3 @@
 package classifier.sample
 
-case class Object(properties: List[ObjectProperty])
+case class Object(words: List[Word])

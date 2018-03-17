@@ -21,7 +21,7 @@ class NaiveBayesClassifier extends Classifier {
   }
 
   private def logProba(o: Object, cl: ObjectClass): Double = {
-    def wordProba(w: Word): Double =
+    def wordProba(w: Property): Double =
       (fit.classSpecificWordCount(w, cl) + 1) / (fit.uniqueWordCount + fit.classWordCount(cl))
 
     log(fit.classProba(cl)) + o.words().foldLeft(0d)((_, x) => log(wordProba(x)))

@@ -10,5 +10,5 @@ case class LabeledSample(objects: Map[TextObject, TextObjectClass] = Map()) {
   def this(s: Sample, cl: TextObjectClass) = this(s.objects.map(x => (x, cl)).toMap)
   def this(raw: List[TextObject], cl: TextObjectClass) = this(Sample(raw), cl)
 
-  def toSample: Sample = Sample(objects.keySet.toList)
+  def toSample = Sample(objects.keySet.toList)
 }

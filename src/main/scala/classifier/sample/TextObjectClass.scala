@@ -1,3 +1,3 @@
 package classifier.sample
 
-case class TextObjectClass(name: String = "")
+case class TextObjectClass(name: String)

@@ -1,14 +1,14 @@
 package classifier.sample
 
-case class LabeledSample(objects: Map[Object, ObjectClass] = Map()) {
-  val classList: List[ObjectClass] = objects.values.toList.distinct
-  val wordList: List[Property] = objects.keys.toList.flatMap(_.words()).distinct
+case class LabeledSample(objects: Map[TextObject, TextObjectClass] = Map()) {
+  val classList: List[TextObjectClass] = objects.values.toList.distinct
+  val wordList: List[String] = objects.keys.toList.flatMap(_.words).distinct
 
-  def classObjectList(cl: ObjectClass): List[Object] = objects.filter(_.equals(cl)).keys.toList
-  def classWordList(cl: ObjectClass): List[Property] = classObjectList(cl).flatMap(_.words()).distinct
+  def classObjectList(cl: TextObjectClass): List[TextObject] = objects.filter(_.equals(cl)).keys.toList
+  def classWordList(cl: TextObjectClass): List[String] = classObjectList(cl).flatMap(_.words).distinct
 
-  def fromStringList(raw: List[String], cl: ObjectClass): LabeledSample = fromSample(Sample().fromStringList(raw), cl)
-  def fromSample(s: Sample, cl: ObjectClass): LabeledSample = LabeledSample(s.objects.map(x => (x, cl)).toMap)
+  def this(s: Sample, cl: TextObjectClass) = this(s.objects.map(x => (x, cl)).toMap)
+  def this(raw: List[TextObject], cl: TextObjectClass) = this(Sample(raw), cl)
 
   def toSample: Sample = Sample(objects.keySet.toList)
 }

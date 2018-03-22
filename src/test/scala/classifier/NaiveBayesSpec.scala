@@ -1,13 +1,13 @@
 package classifier
 
 import classifier.naiveBayes.NaiveBayesClassifier
-import classifier.sample.{LabeledSample, Object, ObjectClass, Sample}
+import classifier.sample._
 import csv.loader.TweetLoader
 import org.scalatest.{FunSuite, GivenWhenThen}
 
 class NaiveBayesSpec extends FunSuite with GivenWhenThen {
-  val positiveClass = ObjectClass("Positive")
-  val negativeClass = ObjectClass("Negative")
+  val positiveClass = TextObjectClass("Positive")
+  val negativeClass = TextObjectClass("Negative")
 
   val positive: Sample = new TweetLoader("positive.csv").loadSample
   val negative: Sample = new TweetLoader("negative.csv").loadSample
@@ -29,8 +29,8 @@ class NaiveBayesSpec extends FunSuite with GivenWhenThen {
     println(accuracy) // no assertions, just print accuracy
   }
 
-  def toMap(s: Sample, cl: ObjectClass): Map[Object, ObjectClass] = LabeledSample().fromSample(s, cl).objects
-  def toMap(pos: Sample, neg: Sample): Map[Object, ObjectClass] = toMap(pos, positiveClass) ++ toMap(neg, negativeClass)
+  def toMap(s: Sample, cl: TextObjectClass): Map[TextObject, TextObjectClass] = new LabeledSample(s, cl).objects
+  def toMap(pos: Sample, neg: Sample): Map[TextObject, TextObjectClass] = toMap(pos, positiveClass) ++ toMap(neg, negativeClass)
 
   def splitToTrainTest(n: Double): (LabeledSample, LabeledSample) = {
     val (trainP, testP) = splitSample(positive, n)

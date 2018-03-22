@@ -15,15 +15,15 @@ class NaiveBayesClassifier extends Classifier {
     LabeledSample(labeled)
   }
 
-  private def classifyObject(o: Object): ObjectClass = {
+  private def classifyObject(o: TextObject): TextObjectClass = {
     val probas = fit.classList.map(cl => (cl, logProba(o, cl))).toMap
     probas.maxBy(_._2)._1
   }
 
-  private def logProba(o: Object, cl: ObjectClass): Double = {
-    def wordProba(w: Property): Double =
+  private def logProba(o: TextObject, cl: TextObjectClass): Double = {
+    def wordProba(w: String): Double =
       (fit.classSpecificWordCount(w, cl) + 1) / (fit.uniqueWordCount + fit.classWordCount(cl))
 
-    log(fit.classProba(cl)) + o.words().foldLeft(0d)((_, x) => log(wordProba(x)))
+    log(fit.classProba(cl)) + o.words.foldLeft(0d)((_, x) => log(wordProba(x)))
   }
 }

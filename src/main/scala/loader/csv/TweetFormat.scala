@@ -1,4 +1,4 @@
-package csv.loader
+package loader.csv
 
 import com.github.tototoshi.csv.DefaultCSVFormat
 

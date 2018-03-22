@@ -2,7 +2,7 @@ package classifier
 
 import classifier.naiveBayes.NaiveBayesClassifier
 import classifier.sample._
-import csv.loader.TweetLoader
+import loader.csv.TweetLoader
 import org.scalatest.{FunSuite, GivenWhenThen}
 
 class NaiveBayesSpec extends FunSuite with GivenWhenThen {

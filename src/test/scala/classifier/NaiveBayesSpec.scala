@@ -15,8 +15,8 @@ class NaiveBayesSpec extends FunSuite with GivenWhenThen {
   val classifier = new NaiveBayesClassifier
 
   test("Medium split") {
-    Given("trained with 9/10 of sample")
-    val (trainSample, testSample) = splitToTrainTest(0.9)
+    Given("trained")
+    val (trainSample, testSample) = splitToTrainTest(0.9997)
     classifier.train(trainSample)
 
     When("test part is classified")

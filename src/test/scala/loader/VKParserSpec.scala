@@ -9,7 +9,7 @@ import scala.io.Source
 class VKParserSpec extends FunSuite with GivenWhenThen {
   test("Test feed") {
     Given("feed")
-    val feed = Source.fromFile("feed.json").mkString
+    val feedJson = Source.fromFile("src/test/data/feed.json").mkString
 
     val expected = List(
       Post(32860, -106879986, "Корнелл был известен по группам Soundgarden и Audioslave.", 0),
@@ -18,14 +18,15 @@ class VKParserSpec extends FunSuite with GivenWhenThen {
     )
 
     When("parsing posts")
-    val posts = VKParser.parseFeed(feed)
+    val posts = VKParser.parseFeed(feedJson)
 
     Then("list of Post")
+    assert(expected.equals(posts.toList))
   }
 
   test("Test users") {
     Given("user list")
-    val users = Source.fromFile("users.json").mkString
+    val userJson = Source.fromFile("src/test/data/users.json").mkString
 
     val expected = List(
       User(210700286, "Lindsey", "Stirling", "https://sun9-8.us...20f/W8Uv-hC7Bvo.jpg"),
@@ -34,10 +35,10 @@ class VKParserSpec extends FunSuite with GivenWhenThen {
     )
 
     When("parsing users")
-    val userList = VKParser.parseUser(users)
+    val users = VKParser.parseUser(userJson)
 
     Then("list of User")
-    assert(userList.equals(expected))
+    assert(expected.equals(users.toList))
   }
 
 }

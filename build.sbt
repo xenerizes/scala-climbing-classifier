@@ -8,5 +8,6 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % "test"
 
 libraryDependencies += "com.github.tototoshi" %% "scala-csv" % "1.3.5"
 
-logBuffered in Test := false
+libraryDependencies += "com.typesafe.play" %% "play-json" % "2.6.9"
 
+logBuffered in Test := false

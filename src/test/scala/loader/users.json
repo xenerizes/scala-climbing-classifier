@@ -1,0 +1,33 @@
+{
+  "response": [{
+    "id": 210700286,
+    "first_name": "Lindsey",
+    "last_name": "Stirling",
+    "city": {
+      "id": 5331,
+      "title": "Los Angeles"
+    },
+    "photo_100": "https://sun9-8.us...20f/W8Uv-hC7Bvo.jpg",
+    "verified": 1
+  }, {
+    "id": 56739221,
+    "first_name": "Nika",
+    "last_name": "Lapulka",
+    "city": {
+      "id": 143,
+      "title": "Tolyatti"
+    },
+    "photo_100": "https://vk.com/images/camera_100.png",
+    "verified": 0
+  }, {
+    "id": 87283495,
+    "first_name": "Mr.",
+    "last_name": "Podlets",
+    "city": {
+      "id": 1957236,
+      "title": "Baku"
+    },
+    "photo_100": "https://pp.userap...3495/d_556537b8.jpg",
+    "verified": 0
+  }]
+}

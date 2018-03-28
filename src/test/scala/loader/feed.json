@@ -1,0 +1,150 @@
+{
+  "response": {
+    "items": [
+      {
+        "type": "post",
+        "source_id": -106879986,
+        "date": 1495094599,
+        "post_id": 32860,
+        "post_type": "post",
+        "text": "Корнелл был известен по группам Soundgarden и Audioslave.",
+        "marked_as_ads": 0,
+        "attachments": [
+          {
+            "type": "link",
+            "link": {
+              "url": "https://news.mail.ru/society/29783058/",
+              "title": "Умер музыкант Крис Корнелл",
+              "caption": "news.mail.ru",
+              "description": "Скончался музыкант Крис Корнелл, сообщает Fox News."
+            }
+          }
+        ],
+        "post_source": {
+          "type": "vk"
+        },
+        "comments": {
+          "count": 0,
+          "can_post": 1
+        },
+        "likes": {
+          "count": 0,
+          "user_likes": 0,
+          "can_like": 1,
+          "can_publish": 1
+        },
+        "reposts": {
+          "count": 0,
+          "user_reposted": 0
+        },
+        "views": {
+          "count": 4
+        }
+      },
+      {
+        "type": "post",
+        "source_id": -30022666,
+        "date": 1495094591,
+        "post_id": 244688,
+        "post_type": "post",
+        "text": "",
+        "marked_as_ads": 0,
+        "attachments": [
+          {
+            "type": "photo",
+            "photo": {
+              "id": 456256939,
+              "album_id": -7,
+              "owner_id": -30022666,
+              "user_id": 100,
+              "photo_75": "https://cs540107....2a2/xP3RDjZRVG8.jpg",
+              "photo_130": "https://cs540107....2a3/Jp2jmEkrwkc.jpg",
+              "photo_604": "https://cs540107....2a4/An04JsM_zyw.jpg",
+              "photo_807": "https://cs540107....2a5/9vcLGDRXbw8.jpg",
+              "photo_1280": "https://cs540107....2a6/k3_YnNIWi1o.jpg",
+              "photo_2560": "https://cs540107....2a7/Bou-TR-G0C4.jpg",
+              "width": 960,
+              "height": 1114,
+              "text": "",
+              "date": 1495084543,
+              "post_id": 244688,
+              "access_key": "e7ef5c137c4c30a144"
+            }
+          }
+        ],
+        "post_source": {
+          "type": "vk"
+        },
+        "comments": {
+          "count": 0,
+          "can_post": 0
+        },
+        "likes": {
+          "count": 13,
+          "user_likes": 0,
+          "can_like": 1,
+          "can_publish": 1
+        },
+        "reposts": {
+          "count": 1,
+          "user_reposted": 0
+        },
+        "views": {
+          "count": 1563
+        }
+      },
+      {
+        "type": "post",
+        "source_id": -90074084,
+        "date": 1495094588,
+        "post_id": 33703,
+        "post_type": "post",
+        "text": "Пусть все на западе увидят, как у нас хорошо!",
+        "marked_as_ads": 0,
+        "attachments": [
+          {
+            "type": "video",
+            "video": {
+              "id": 456239857,
+              "owner_id": -90074084,
+              "title": "пусть все на западе увидят, как у нас хорошо",
+              "duration": 4,
+              "description": "https://vk.com/us....com/useful_druzhko",
+              "date": 1494869772,
+              "comments": 0,
+              "views": 650,
+              "width": 1280,
+              "height": 720,
+              "photo_130": "https://cs540107....ac8/aKFK1MAmq-8.jpg",
+              "photo_320": "https://cs540107....ac6/Ih0a_EH3Tf4.jpg",
+              "photo_800": "https://cs540107....ac5/yu44sg3eE0E.jpg",
+              "access_key": "977ec90698efc33667",
+              "first_frame_320": "https://cs540107....d53/Q-wX7VNdOaY.jpg",
+              "first_frame_160": "https://cs540107....d54/mqeSI6sFiOQ.jpg",
+              "first_frame_130": "https://cs540107....d55/ohilJC20jUM.jpg",
+              "first_frame_800": "https://cs540107....d52/nwyTMPN5F48.jpg",
+              "can_add": 1
+            }
+          }
+        ],
+        "comments": {
+          "count": 0,
+          "can_post": 1
+        },
+        "likes": {
+          "count": 4,
+          "user_likes": 0,
+          "can_like": 1,
+          "can_publish": 1
+        },
+        "reposts": {
+          "count": 0,
+          "user_reposted": 0
+        },
+        "views": {
+          "count": 111
+        }
+      }
+    ]
+  }
+}

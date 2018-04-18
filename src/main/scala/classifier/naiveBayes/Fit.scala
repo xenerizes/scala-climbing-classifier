@@ -3,7 +3,7 @@ package classifier.naiveBayes
 import classifier.sample.{LabeledSample, TextObjectClass}
 
 private[naiveBayes] case class Fit(sample: LabeledSample = new LabeledSample) {
-  val classList: List[TextObjectClass] = sample.classList
+  val classList: Seq[TextObjectClass] = sample.classList
   val uniqueWordCount: Int = sample.wordList.size
 
   def classProba(cl: TextObjectClass): Double = classObjectCount(cl).toDouble / sample.objects.size

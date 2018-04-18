@@ -1,3 +1,3 @@
 package classifier.sample
 
-case class Sample(objects: List[TextObject])
+case class Sample(objects: Seq[TextObject])

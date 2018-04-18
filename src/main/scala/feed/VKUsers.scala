@@ -1,5 +1,3 @@
 package feed
 
-case class VKUsers(items: Seq[User]) {
-  def toList: List[User] = items.toList
-}
+case class VKUsers(items: Seq[User])

@@ -8,7 +8,7 @@ private[naiveBayes] case class Fit(sample: LabeledSample = new LabeledSample) {
 
   def classProba(cl: TextObjectClass): Double = classObjectCount(cl).toDouble / sample.objects.size
   def classSpecificWordCount(w: String, cl: TextObjectClass): Int = sample.classWordList(cl).count(_.equals(w))
-  def classWordCount(cl: TextObjectClass): Int = sample.classWordList(cl).length
+  def classWordCount(cl: TextObjectClass): Int = sample.classWordCount(cl)
 
   private def classObjectCount(cl: TextObjectClass): Int = sample.objects.count(_._2.equals(cl))
 }
